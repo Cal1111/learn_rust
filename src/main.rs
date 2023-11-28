@@ -303,7 +303,41 @@ let can2 = Flavors::Guava{
 // flavors_can(Flavors::Orange);
 // flavors_can(Flavors::Sprite);
 // flavors_can(Flavors::Guava);
+
+//tuples 
+//mode 1
+// let coord:(i8,i8) = (2,3);
+// println!("{},{}",coord.0,coord.1);
+// //mode 2
+// let (x,y) = (2,3);
+// println!("{},{}",x,y);
+// //mode 3
+// let (name, last, age) = ("Carlos","José",10);
+// println!("{} {} {}", name,last,age);
+
+// let (x,y) = tuples();
+//     if y > 5{
+//         println!("Greater than 5!");
+//     } else if y < 5 {
+//         println!("Less than 5!");
+//     } else {
+//         println!("Equal the 5!");
+//     }
+
+//expression
+
+
 }
+
+
+//function tuples
+// fn tuples() -> (i8,i8){
+//     (5,7)
+// }
+
+//destruct the valeu in two variables
+
+//using if...else...if...else for determining to what print
 // fn flavors_can(my_can:Flavors){
 //     let spr = Store {
 //         liquid: 1,
@@ -335,10 +369,6 @@ let can2 = Flavors::Guava{
 //     liquid: i16,
 //     price: i16,
 // }
-
-
-
-
 // //struct
 // struct GroceryItem {
 //     stock:i8,
