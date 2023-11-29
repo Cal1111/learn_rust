@@ -325,17 +325,75 @@ let can2 = Flavors::Guava{
 //     }
 
 //expression
+//secret_file:admin=only;
+// let acess_level = Acess::Guest;
+// let can_acess_file = match acess_level{
+//     Acess::Admin => true,
+//         _ => false,
+// };
+// println!("{}",can_acess_file);
 
 
+//use match expression to determine which message
+//to print
+// show();
+
+
+let book = Book {
+    pages: 30,
+    rating: 4,
+};
+display_page_count(&book);
+display_rating(&book);
+}
+// ownership
+struct Book {
+    pages:i16,
+    rating:i16
 }
 
+fn display_page_count(book: &Book){
+    println!("{}",book.pages);
+}
+
+fn display_rating(book: &Book){
+    println!("{}",book.rating);
+}
+
+//expression - exercise 
+// fn show(){
+// let my_bool = 100;
+// let _value = if my_bool > 100 {
+//     true
+// } else {
+//     false
+// };
+//  // FLOW -> _showres = res = _value = my_bool;
+// let res = _value;
+// let _showres = match res{
+    //     true => println!("its big"),
+    //     false => println!("its small"),
+    // };   
+// }
+//expression
+// let my_num = 3;
+// let is_lt_5 = if my_num < 5 {
+//     true
+// } else {
+//     false
+// };
+// let is_lt_5 = my_num < 5;
+// enum Acess{
+//     Guest,
+//     Admin,
+//     Manager,
+//     User,
+// } 
 
 //function tuples
 // fn tuples() -> (i8,i8){
 //     (5,7)
 // }
-
-//destruct the valeu in two variables
 
 //using if...else...if...else for determining to what print
 // fn flavors_can(my_can:Flavors){
@@ -374,7 +432,6 @@ let can2 = Flavors::Guava{
 //     stock:i8,
 //     price: f32,
 // } 
-
 
  //exercise about enum
 // enum Colors{
@@ -427,7 +484,5 @@ let can2 = Flavors::Guava{
 //     Up,
 //     Down,
 //     Right,
-//     Left
+//     Left,
 // }
-
-//tuples 
