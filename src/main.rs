@@ -1,5 +1,7 @@
 //use std::io;
 
+use std::net::Shutdown;
+
 fn main() {
     //let name: i8  = 20;
     //aspas duplas é uma string 
@@ -336,29 +338,7 @@ let can2 = Flavors::Guava{
 
 //use match expression to determine which message
 //to print
-// show();
-
-
-let book = Book {
-    pages: 30,
-    rating: 4,
-};
-display_page_count(&book);
-display_rating(&book);
-}
-// ownership
-struct Book {
-    pages:i16,
-    rating:i16
-}
-
-fn display_page_count(book: &Book){
-    println!("{}",book.pages);
-}
-
-fn display_rating(book: &Book){
-    println!("{}",book.rating);
-}
+// show();display_page_count(book);
 
 //expression - exercise 
 // fn show(){
@@ -366,8 +346,72 @@ fn display_rating(book: &Book){
 // let _value = if my_bool > 100 {
 //     true
 // } else {
-//     false
+//     false 
+//};
+// // ownership
+// let book = Book {
+//     pages: 30,
+//     rating: 4,
 // };
+// display_page_count(&book);
+// display_rating(&book);
+// }
+
+// struct Book {
+//     pages:i16,
+//     rating:i16
+// }
+
+// fn display_page_count(book: &Book){
+//     println!("{}",book.pages);
+// }
+
+// fn display_rating(book: &Book){
+//     println!("{}",book.rating);
+// }
+
+
+//ownership - exercise
+//var show_items
+// let show_items = GroseryItem {
+//     quantity: 10,
+//     id:42369,
+//  };
+
+//  display_id(&show_items);
+//  display_quantity(&show_items);
+
+let hot = Temperature { degress_c: 34.5 };
+hot.show_temp();
+
+let cold = Temperature::freezing();
+cold.show_temp();
+ }
+ //impl - demo
+struct Temperature{
+    degress_c: f64,
+}
+impl Temperature{
+fn freezing () -> Self { //Self its like "myself"
+    Self {degress_c:35.0}
+}
+fn show_temp(&self){
+    println!("Display temperature: {}",self.degress_c);
+    }
+}
+
+//  struct GroseryItem{
+//     quantity:i32,
+//     id:i32,
+// }
+
+// fn display_quantity(show_items: &GroseryItem){
+//         println!("The quantity is {}",show_items.quantity);
+// }
+
+// fn display_id(show_items: &GroseryItem){
+//     println!("The id number is {}", show_items.id);
+// }
 //  // FLOW -> _showres = res = _value = my_bool;
 // let res = _value;
 // let _showres = match res{
