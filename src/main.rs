@@ -1,6 +1,6 @@
 //use std::io;
 
-use std::net::Shutdown;
+// use std::net::Shutdown;
 
 fn main() {
     //let name: i8  = 20;
@@ -381,34 +381,63 @@ let can2 = Flavors::Guava{
 //  display_id(&show_items);
 //  display_quantity(&show_items);
 
-let hot = Temperature { degress_c: 34.5 };
-hot.show_temp();
+//impl - exercise
 
-let cold = Temperature::freezing();
-cold.show_temp();
- }
- //impl - demo
-struct Temperature{
-    degress_c: f64,
+
+let t_box = Charact::value_box(BoxColor::Blue);
+t_box.print_box();
 }
-impl Temperature{
-fn freezing () -> Self { //Self its like "myself"
-    Self {degress_c:35.0}
+//struct - characteristc
+struct Charact{
+    dimension: i32,
+    weight:f64,
 }
-fn show_temp(&self){
-    println!("Display temperature: {}",self.degress_c);
+//enum - box color
+enum BoxColor{
+    Black,
+    Blue,
+}
+impl Charact {
+    fn value_box(color: BoxColor) -> Self{
+    match color {
+        BoxColor::Black => println!("its black"),
+        BoxColor::Blue => println!("its blue"),
+    }    
+        Self {dimension: 20, weight: 25.5}
     }
+    //print the box
+    fn print_box (&self) -> () {
+        println!("Dimension is {}, Weight is {}",&self.dimension,&self.weight);
+    }
+
 }
+
+
+//  //impl - demo
+// let hot = Temperature { degress_c: 34.5 };
+// hot.show_temp();
+
+// let cold = Temperature::freezing();
+// cold.show_temp();
+// struct Temperature{
+//     degress_c: f64,
+// }
+// impl Temperature{
+// fn freezing () -> Self { //Self its like "myself" ->>Temperature
+//     Self {degress_c:35.0}
+// }
+// fn show_temp(&self){
+//     println!("Display temperature: {}",self.degress_c);
+//     }
+// }
 
 //  struct GroseryItem{
 //     quantity:i32,
 //     id:i32,
 // }
-
 // fn display_quantity(show_items: &GroseryItem){
 //         println!("The quantity is {}",show_items.quantity);
 // }
-
 // fn display_id(show_items: &GroseryItem){
 //     println!("The id number is {}", show_items.id);
 // }
