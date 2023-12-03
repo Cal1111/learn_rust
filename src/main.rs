@@ -382,35 +382,74 @@ let can2 = Flavors::Guava{
 //  display_quantity(&show_items);
 
 //impl - exercise
+// let t_box = Charact::value_box(BoxColor::Blue);
+// t_box.print_box();
+
+//vector-exercise 
+// let my_scores = vec![
+//     Test { score: 20},
+//     Test { score: 40 },
+// ];
+
+// for test in my_scores{
+//     println!("Value {}",test.score);
+// }
+
+// example - vector 
+// let my_numbers = vec![1,2,3];
+
+// let mut my_numbers = Vec::new();
+// my_numbers.push(1);
+// my_numbers.push(2);
+// my_numbers.push(3);
+// my_numbers.pop();
+// my_numbers.len(); //this is 2
+
+//vector - exercise
+//vector to store 4 numbers
+// let my_numbers = vec![10, 20, 30, 40];
+// for num in &my_numbers {
+//     match num {
+//         30 => println!("thirty"),
+//         _ => println!("{:?}", num),
+//     }
+// }
+// println!("number of elements = {:?}", my_numbers.len());
 
 
-let t_box = Charact::value_box(BoxColor::Blue);
-t_box.print_box();
 }
+//loop iterate
+
+//demo - vector
+// struct Test {
+//     score: i32
+// }
+
+
 //struct - characteristc
-struct Charact{
-    dimension: i32,
-    weight:f64,
-}
-//enum - box color
-enum BoxColor{
-    Black,
-    Blue,
-}
-impl Charact {
-    fn value_box(color: BoxColor) -> Self{
-    match color {
-        BoxColor::Black => println!("its black"),
-        BoxColor::Blue => println!("its blue"),
-    }    
-        Self {dimension: 20, weight: 25.5}
-    }
-    //print the box
-    fn print_box (&self) -> () {
-        println!("Dimension is {}, Weight is {}",&self.dimension,&self.weight);
-    }
+// struct Charact{
+//     dimension: i32,
+//     weight:f64,
+// }
+// //enum - box color
+// enum BoxColor{
+//     Black,
+//     Blue,
+// }
+// impl Charact {
+//     fn value_box(color: BoxColor) -> Self{
+//     match color {
+//         BoxColor::Black => println!("its black"),
+//         BoxColor::Blue => println!("its blue"),
+//     }    
+//         Self {dimension: 20, weight: 25.5}
+//     }
+//     //print the box
+//     fn print_box (&self) -> () {
+//         println!("Dimension is {}, Weight is {}",&self.dimension,&self.weight);
+//     }
 
-}
+// }
 
 
 //  //impl - demo
