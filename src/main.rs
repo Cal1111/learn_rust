@@ -1,5 +1,4 @@
 //use std::io;
-
 // use std::net::Shutdown;
 
 fn main() {
@@ -465,6 +464,38 @@ Struct Message {
 //     }
 
 //demo - derive
+// let me = Employee{
+//     position: Position::Worker, //enum
+//     work_hours: 40,
+// };
+//     println!("{:?}",me);
+//     print_employee(me);
+//     print_employee(me);
+// }
+// #[derive(Debug, Clone, Copy)]
+// //demo - derive 
+// enum Position {
+//     Manager,
+//     Supervisor,
+//     Worker,
+// }
+// #[derive(Debug,Clone,Copy)] //derive
+// struct Employee{
+//     position:Position,
+//     work_hours: i64,
+// }
+
+// fn print_employee(emp:Employee){ //ownership
+//     println!("{:?}",emp);
+// }
+
+//type annotations - e.g.
+// let number: Vec<i32> = vec![1,2,3];
+// let letters: Vec<char> = vec!['a','b'];
+//let number: Vec<Mouse> = vec![
+//    Mouse::LeftClick,
+//    Mouse::RightClick,
+//]
 
 }
 //string - exercise
