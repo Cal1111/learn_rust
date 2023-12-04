@@ -416,16 +416,74 @@ let can2 = Flavors::Guava{
 // }
 // println!("number of elements = {:?}", my_numbers.len());
 
+// data type: string
+//example - string
+
+// print_it("message");
+// let message = String::from("another message");
+// let owned_string = "owned string".to_owned();
+// print_it(&message);
+// print_it(&owned_string);
+
+
+//when i use struct, i need put String
+/*
+Struct Message {
+    name: String
+} */
+//vector with 3 index
+// let _vec = vec![
+//     Person {
+//         name: "Carlos".to_owned(),
+//         age: 10,
+//         favorite_color: "Blue".to_owned(),
+//     },
+//     Person {
+//         name: "Jao".to_owned(),
+//         age: 80,
+//         favorite_color: "Pink".to_owned(),
+//     },
+//     Person {
+//         name: "Ying".to_owned(),
+//         age: 2,
+//         favorite_color: "Black".to_owned(),
+//     },
+    
+// ];
+
+// for people in _vec {
+//     // match people.age {
+//     //   10 => 
+//     // }
+//     if people.age <= 10{
+//         print_it(&people.favorite_color);
+//         print_it(&people.name);
+// }
+// fn print_it(data:&str){
+//     println!("{}",data);
+//         }
+//     }
+
+//demo - derive
 
 }
-//loop iterate
+//string - exercise
 
+// struct Person {
+//     name: String,
+//     age: i32,
+//     favorite_color: String,
+// }
+
+
+
+// fn print_it(data:&str){
+//     println!("{}",data);
+// }
 //demo - vector
 // struct Test {
 //     score: i32
 // }
-
-
 //struct - characteristc
 // struct Charact{
 //     dimension: i32,
@@ -448,10 +506,7 @@ let can2 = Flavors::Guava{
 //     fn print_box (&self) -> () {
 //         println!("Dimension is {}, Weight is {}",&self.dimension,&self.weight);
 //     }
-
 // }
-
-
 //  //impl - demo
 // let hot = Temperature { degress_c: 34.5 };
 // hot.show_temp();
