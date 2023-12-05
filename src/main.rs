@@ -496,18 +496,94 @@ Struct Message {
 //    Mouse::LeftClick,
 //    Mouse::RightClick,
 //]
+//enum - revisited
+// enum Mouse{
+//     LeftClick,
+//     RightClick,
+//     MiddleClick,
+//     Scroll(i32),
+//     Move(i32,i32),  //(x,y) position of mouse
+// }
 
-}
-//string - exercise
+// enum PromoDiscount{
+//     NewUser,
+//     Holiday(String),
+// }
 
+// enum Discount{
+//     Percent(f64),
+//     Flat(i32),
+//     Promo(PromoDiscount),
+//     Custom(String),
+// }
+
+// let n = 3;
+// match n{
+//     3 => println!("three"),
+//     other => println!("{:?}",other),
+// };
+
+// let flat = Discount::Flat(2);
+
+// match flat {
+//     Discount::Flat(2) => println!("flat é 2"),
+//     Discount::Flat(amount) => println!("{}",amount),
+//     _ => (),
+// }
+// let concert = Ticket {
+//     event: "concert".to_owned(),
+//     price: 50,
+// };
+
+// match concert {
+//     Ticket {price:50, event} => println!("event @ 50 {:?} ",event),
+//     Ticket {price, ..} => println!("event @ 50 {:?} ",price), 
+//     //when we had one value and second value is ..
+//     // .. it's ignore, when use Ticket {price:50, event}
+//     //the value price it's defined && event will be receive your value 
+// }
+// let tickets = vec![
+//         Ticket::Backstage(50.0, "Billy".to_owned()),
+//         Ticket::Standard(15.0),
+//         Ticket::Vip(30.0, "Amy".to_owned()),
+//     ];
+
+//     for ticket in tickets {
+//         match ticket {
+//             Ticket::Backstage(price, holder) => {
+//                 println!("Backstate ticket holder: {:?}, price: {:?}", holder, price);
+//             }
+//             Ticket::Standard(price) => println!("Standard ticket price: {:?}", price),
+//             Ticket::Vip(price, holder) => {
+//                 println!("VIP ticket holder: {:?}, price: {:?}", holder, price);
+//             }
+//         }
+//     }
+
+
+ }
+//advanced match - exercise
+// enum Ticket {
+//     Backstage(f64, String),
+//     Standard(f64),
+//     Vip(f64, String),
+// }
+
+// //advanced match 
+// enum Discount {
+//     Percent(i32),
+//     Flat(i32),
+// }
+
+// struct Ticket{
+//     event: String,
+//     price: i32,
+// }
 // struct Person {
 //     name: String,
 //     age: i32,
 //     favorite_color: String,
 // }
-
-
-
 // fn print_it(data:&str){
 //     println!("{}",data);
 // }
