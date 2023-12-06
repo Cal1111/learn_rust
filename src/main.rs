@@ -560,8 +560,47 @@ Struct Message {
 //         }
 //     }
 
+//e.g option
+// let mark = Customer {
+//     age: Some(22), email: "mark@example.com".to_owned(),
+// };
 
+// let notch = Customer {
+//     age: None, email: "notch@example.com".to_owned(),
+// };
+
+// match notch.age {
+//     Some(age) => println!("customer is {:?} years old",age),
+//     None => println!("Customer not provided"),
+// }
+//option - exercise
+// let stu_1 = Student {
+//     name: ("Cris".to_owned()),
+//     locker: Some(123),
+// };
+// println!("my name is {:?}",stu_1.name);
+// match stu_1.locker {
+//     Some(ans) => println!("my locker is {:?}",ans),
+//     None => println!("don't have locker"),
+// }
  }
+
+//  //option - exercise
+//  struct Student {
+//     name: String,
+//     locker: Option<i32>
+//  }
+//  struct Customer{
+//     age: Option<i32>,
+//     email: String,
+//  }
+
+// //definition option
+//  enum option<T>{
+//      Some(T),
+//      None,
+//  }
+
 //advanced match - exercise
 // enum Ticket {
 //     Backstage(f64, String),
