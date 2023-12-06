@@ -583,8 +583,39 @@ Struct Message {
 //     Some(ans) => println!("my locker is {:?}",ans),
 //     None => println!("don't have locker"),
 // }
- }
+// use /// for documentation 
 
+//Stanrd library
+// let numbers = vec![1,2,3];
+// match numbers.is_empty(){
+//     true => println!("no numbers"),
+//     false => println!("has numbers"),
+// }
+//SLF - exercise
+// let s = "HELLO";
+// print!("{}",s.to_lowercase());
+// print!("{}",s.to_uppercase());
+
+//result - demo
+// let choice = get_choice("mainmenu");
+// println!("choice = {:?}",choice);
+//  } 
+// //result - demo
+// #[derive(Debug)]
+// enum MenuChoice {
+//     MainMenu,
+//     Start,
+//     Quit,
+// }
+
+// fn get_choice(input:&str) -> Result<MenuChoice, String> {
+//  match input {
+//     "mainmenu" => Ok(MenuChoice::MainMenu),
+//     "start" => Ok(MenuChoice::Start),
+//     "quit" => Ok(MenuChoice::Quit),
+//     _ => Err("menu not found".to_owned()),  
+//  }   
+// }
 //  //option - exercise
 //  struct Student {
 //     name: String,
