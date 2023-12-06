@@ -607,7 +607,7 @@ Struct Message {
 //     Start,
 //     Quit,
 // }
-
+}
 // fn get_choice(input:&str) -> Result<MenuChoice, String> {
 //  match input {
 //     "mainmenu" => Ok(MenuChoice::MainMenu),
