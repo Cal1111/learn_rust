@@ -597,17 +597,31 @@ Struct Message {
 // print!("{}",s.to_uppercase());
 
 //result - demo
-// let choice = get_choice("mainmenu");
+// let choice: Result<MenuChoice, _> = get_choice("mainmenu");
+// println!("choice = {:?}",choice); 
+// pick_choice("start");
+// let choice = pick_choice("end");
 // println!("choice = {:?}",choice);
-//  } 
-// //result - demo
+ } 
+//result - demo
 // #[derive(Debug)]
+// //structure
 // enum MenuChoice {
 //     MainMenu,
 //     Start,
 //     Quit,
 // }
-}
+// //print choice
+// fn print_choice(choice:&MenuChoice){
+//     println!("choice = {:?}",choice);
+// }
+// //pick choice
+// fn pick_choice(input:&str) -> Result<(), String> {
+//     let choice:MenuChoice = get_choice(input)?;
+//     print_choice(&choice);
+//     Ok(())
+// }
+// //get_choice and match input
 // fn get_choice(input:&str) -> Result<MenuChoice, String> {
 //  match input {
 //     "mainmenu" => Ok(MenuChoice::MainMenu),
