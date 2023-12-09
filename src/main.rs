@@ -1,7 +1,40 @@
 //use std::io;
 // use std::net::Shutdown;
+use std::{collections::HashMap, fmt::format};
+// #[derive(Debug)]
+// struct Content {
+//     content: String,
+// }
 
 fn main() {
+    let mut furni = HashMap::new();
+
+    furni.insert( "Chairs",5);
+    furni.insert("Beds",3);
+    furni.insert("Tables", 2);
+    furni.insert("Couches",0);
+
+    let mut total_stock = 0;
+    
+    for (item, qty) in furni.iter(){
+        total_stock = total_stock + qty;
+        println!("item: {:?}, qty: {:?}",item,qty);
+      let stock_count = if qty == &0 {
+            "out of stock!".to_owned()
+        } else {
+            format!("{:?}", qty)
+        };
+        println!("item={:?}, stock={:?}", item, stock_count);
+    } 
+    println!("total stock={:?}", total_stock);
+    // let mut lockers = HashMap::new();
+    // lockers.insert(1, Content {content: "stuff".to_owned()});
+    // lockers.insert(2, Content {content: "shirts".to_owned()});
+    // lockers.insert(3, Content {content: "pants".to_owned()});
+
+    // for (locker_numbers, content) in lockers.iter() {
+    //     println!("number: {:?}, content: {:?}",locker_numbers,content);
+    // }
     //let name: i8  = 20;
     //aspas duplas é uma string 
     //aspas simples é um char
@@ -602,8 +635,138 @@ Struct Message {
 // pick_choice("start");
 // let choice = pick_choice("end");
 // println!("choice = {:?}",choice);
- } 
-//result - demo
+
+//result - exercise
+// let child = Adult::new(15,"Anita");
+// let adult = Adult::new(25,"Bob");
+
+// match child {
+//     Ok(child) => println!("{} is {} years",child.name,child.age),
+//     Err(e) => println!("{e}",),
+// }
+
+// match adult {
+//     Ok(a) => println!("{} is {} years",a.name,a.age),
+//     Err(e) => println!("{e}",),
+// }
+
+//res? - exercise
+// Anita is trying to access the Warehouse, which requires access level 500.
+// Her keycard has access level 1000, which should be allowed.
+// let anita_authorized = authorize("Anita", ProtectedLocation::Warehouse);
+// // Brody is trying to access the Office, which requires access level 800.
+// // His keycard has access level 500, which should be denied.
+// let brody_authorized = authorize("Brody", ProtectedLocation::Office);
+// // Catherine is trying to access the Warehouse, which requires access level 500.
+// // She doesn't have a keycard, so this should be an error.
+// let catherine_authorized = authorize("Catherine", ProtectedLocation::Warehouse);
+// println!("{anita_authorized:?}");
+// println!("{brody_authorized:?}");
+// println!("{catherine_authorized:?}");
+
+ }
+
+//res? - exercise 
+//  #[derive(Clone, Copy, Debug)]
+//  enum ProtectedLocation {
+//      All,
+//      Office,
+//      Warehouse,
+//  }
+ 
+//  impl ProtectedLocation {
+//      fn required_access_level(&self) -> u16 {
+//          match self {
+//              Self::All => 1000,
+//              Self::Office => 800,
+//              Self::Warehouse => 500,
+//          }
+//      }
+//  }
+ 
+//  #[derive(Debug)]
+//  struct Database;
+ 
+//  impl Database {
+//      fn connect() -> Result<Self, String> {
+//          // In a production application, a database connection error is likely to occur here.
+//          Ok(Database)
+//      }
+ 
+//      fn find_employee(&self, name: &str) -> Result<Employee, String> {
+//          match name {
+//              "Anita" => Ok(Employee {
+//                  name: "Anita".to_string(),
+//              }),
+//              "Brody" => Ok(Employee {
+//                  name: "Brody".to_string(),
+//              }),
+//              "Catherine" => Ok(Employee {
+//                  name: "Catherine".to_string(),
+//              }),
+//              _ => Err(String::from("employee not found")),
+//          }
+//      }
+ 
+//      fn get_keycard(&self, employee: &Employee) -> Result<KeyCard, String> {
+//          match employee.name.as_str() {
+//              "Anita" => Ok(KeyCard { access_level: 1000 }),
+//              "Brody" => Ok(KeyCard { access_level: 500 }),
+//              other => Err(format!("{other} doesn't have a keycard")),
+//          }
+//      }
+//  }
+ 
+//  #[derive(Clone, Debug)]
+//  struct Employee {
+//      name: String,
+//  }
+ 
+//  #[derive(Debug)]
+//  struct KeyCard {
+//      access_level: u16,
+//  }
+ 
+//  #[derive(Clone, Copy, Debug)]
+//  enum AuthorizationStatus {
+//      Allow,
+//      Deny,
+//  }
+//  fn authorize(
+//     employee_name: &str,
+//     location: ProtectedLocation,
+// ) -> Result<AuthorizationStatus, String> {
+//     let db = Database::connect()?;
+//     let employee = db.find_employee(employee_name)?;
+//     let keycard = db.get_keycard(&employee)?;
+
+//     if keycard.access_level >= location.required_access_level() {
+//         Ok(AuthorizationStatus::Allow)
+//     } else {
+//         Ok(AuthorizationStatus::Deny)
+//     }
+// }
+// //result - exercise
+// #[derive(Debug)]
+// struct Adult{
+//     age: u8,
+//     name: String,
+// }
+
+// impl Adult {
+//     fn new(age:u8, name: &str) -> Result<Self, &str> {
+//         if age >= 21 {
+//             Ok(Self 
+//                 { 
+//                     age, 
+//                     name: name.to_string(), 
+//             }) 
+//         } else {
+//             Err("Age must be a least 21")
+//         }
+//     }
+// }
+ //result - demo
 // #[derive(Debug)]
 // //structure
 // enum MenuChoice {
