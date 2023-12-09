@@ -1,6 +1,6 @@
 //use std::io;
 // use std::net::Shutdown;
-use std::{collections::HashMap, fmt::format};
+use std::collections::HashMap;
 // #[derive(Debug)]
 // struct Content {
 //     content: String,
@@ -15,7 +15,7 @@ fn main() {
     furni.insert("Couches",0);
 
     let mut total_stock = 0;
-    
+
     for (item, qty) in furni.iter(){
         total_stock = total_stock + qty;
         println!("item: {:?}, qty: {:?}",item,qty);
